@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
-import { adminAPI } from '../lib/api'
 import { ActivityLog } from '../types'
 import { FileText, Search, Filter } from 'lucide-react'
 import { format } from 'date-fns'

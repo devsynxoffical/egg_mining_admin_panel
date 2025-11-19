@@ -33,7 +33,7 @@ export default function MarketPrice() {
       queryClient.invalidateQueries({ queryKey: ['market-price'] })
       setNewPrice('')
     },
-    onError: (error: any, price: number) => {
+    onError: (_error: any, price: number) => {
       // Mock implementation - update localStorage
       const stored = localStorage.getItem('market-price')
       const marketPriceData = stored ? JSON.parse(stored) : { currentPrice: 10.5, lastUpdated: new Date().toISOString(), updatedBy: 'admin@eggmining.com' }

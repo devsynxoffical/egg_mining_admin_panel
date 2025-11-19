@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
-import { adminAPI } from '../lib/api'
 import { User, ReferralTreeNode } from '../types'
 import { 
   Search, 
@@ -301,7 +300,7 @@ function TreeNode({ node, level, expandedNodes, onToggle }: TreeNodeProps) {
 export default function Referrals() {
   const [searchTerm, setSearchTerm] = useState('')
   const [expandedNodes, setExpandedNodes] = useState<Set<string>>(new Set())
-  const [selectedRoot, setSelectedRoot] = useState<string | null>(null)
+  // const [selectedRoot, setSelectedRoot] = useState<string | null>(null)
 
   const { data: users, isLoading } = useQuery<User[]>({
     queryKey: ['referrals'],

@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
-import { adminAPI } from '../lib/api'
 import { Transaction } from '../types'
-import { Receipt, Search, Filter } from 'lucide-react'
+import { Search, Filter } from 'lucide-react'
 import { format } from 'date-fns'
 
 export default function Transactions() {

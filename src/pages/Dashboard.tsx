@@ -1,5 +1,4 @@
 import { useQuery } from '@tanstack/react-query'
-import { adminAPI } from '../lib/api'
 import { DashboardStats } from '../types'
 import { useState } from 'react'
 import AnalyticsChart from '../components/Dashboard/AnalyticsChart'

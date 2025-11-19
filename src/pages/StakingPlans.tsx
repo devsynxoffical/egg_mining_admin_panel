@@ -9,7 +9,6 @@ import {
   Trash2, 
   Save, 
   X,
-  Clock,
   Percent,
   Coins,
   CheckCircle,
@@ -167,7 +166,7 @@ export default function StakingPlans() {
       setSelectedPlan(null)
       setEditForm({})
     },
-    onError: (error: any) => {
+    onError: () => {
       const stored = localStorage.getItem('staking-plans')
       const plansData: StakingPlan[] = stored ? JSON.parse(stored) : mockStakingPlans
       
@@ -193,7 +192,7 @@ export default function StakingPlans() {
       setIsCreating(false)
       setEditForm({})
     },
-    onError: (error: any) => {
+    onError: () => {
       const stored = localStorage.getItem('staking-plans')
       const plansData: StakingPlan[] = stored ? JSON.parse(stored) : mockStakingPlans
       
@@ -225,7 +224,7 @@ export default function StakingPlans() {
       toast.success('Staking plan deleted successfully')
       refetch()
     },
-    onError: (error: any) => {
+    onError: () => {
       const stored = localStorage.getItem('staking-plans')
       const plansData: StakingPlan[] = stored ? JSON.parse(stored) : mockStakingPlans
       

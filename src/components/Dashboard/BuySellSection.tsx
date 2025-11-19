@@ -9,13 +9,13 @@ export default function BuySellSection({ marketPrice }: BuySellSectionProps) {
   const [buyAmount, setBuyAmount] = useState('')
   const [sellAmount, setSellAmount] = useState('')
 
-  const handleNumberPad = (value: string, setValue: (val: string) => void) => {
+  const handleNumberPad = (value: string, setValue: React.Dispatch<React.SetStateAction<string>>) => {
     if (value === 'C') {
       setValue('')
     } else if (value === 'B') {
-      setValue((prev) => prev.slice(0, -1))
+      setValue((prev: string) => prev.slice(0, -1))
     } else {
-      setValue((prev) => prev + value)
+      setValue((prev: string) => prev + value)
     }
   }
 

@@ -230,7 +230,7 @@ export default function InvestmentPlans() {
       setSelectedPlan(null)
       setEditForm({})
     },
-    onError: (error: any) => {
+    onError: () => {
       // Mock implementation
       const stored = localStorage.getItem('investment-plans')
       const plansData: InvestmentPlan[] = stored ? JSON.parse(stored) : mockInvestmentPlans
@@ -257,7 +257,7 @@ export default function InvestmentPlans() {
       setIsCreating(false)
       setEditForm({})
     },
-    onError: (error: any) => {
+    onError: () => {
       // Mock implementation
       const stored = localStorage.getItem('investment-plans')
       const plansData: InvestmentPlan[] = stored ? JSON.parse(stored) : mockInvestmentPlans
@@ -293,7 +293,7 @@ export default function InvestmentPlans() {
       toast.success('Investment plan deleted successfully')
       refetch()
     },
-    onError: (error: any) => {
+    onError: () => {
       // Mock implementation
       const stored = localStorage.getItem('investment-plans')
       const plansData: InvestmentPlan[] = stored ? JSON.parse(stored) : mockInvestmentPlans
@@ -494,7 +494,7 @@ export default function InvestmentPlans() {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-100">
-                  {filteredActivations.map((activation, index) => {
+                  {filteredActivations.map((activation) => {
                       const user = users?.find(u => u.id === activation.userId)
                       const plan = plans?.find(p => p.id === activation.planId)
                       return (

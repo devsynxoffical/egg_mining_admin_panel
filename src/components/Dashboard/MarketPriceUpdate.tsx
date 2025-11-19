@@ -3,7 +3,6 @@ import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { adminAPI } from '../../lib/api'
 import { DollarSign, Save, Edit2 } from 'lucide-react'
 import toast from 'react-hot-toast'
-import { format } from 'date-fns'
 
 interface MarketPriceUpdateProps {
   currentPrice: number
@@ -23,7 +22,7 @@ export default function MarketPriceUpdate({ currentPrice }: MarketPriceUpdatePro
       setIsEditing(false)
       setNewPrice('')
     },
-    onError: (error: any) => {
+    onError: () => {
       // Mock implementation - update localStorage
       const stored = localStorage.getItem('market-price')
       const marketPriceData = stored ? JSON.parse(stored) : { currentPrice: 3.06, lastUpdated: new Date().toISOString(), updatedBy: 'admin@eggmining.com' }

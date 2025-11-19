@@ -5,7 +5,7 @@ interface MarketPriceCardProps {
   change?: string
 }
 
-export default function MarketPriceCard({ title, value, icon, change }: MarketPriceCardProps) {
+export default function MarketPriceCard({ title, value, change }: MarketPriceCardProps) {
   const getCardTheme = () => {
     if (title === 'Egg Balance') {
       return {

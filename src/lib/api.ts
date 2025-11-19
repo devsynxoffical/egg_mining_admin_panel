@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { User, InvestmentPlan, PlanActivation, StakingPlan, ActiveStake } from '../types'
+import { User, InvestmentPlan, StakingPlan } from '../types'
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api'
 
