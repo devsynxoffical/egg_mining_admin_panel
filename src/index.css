@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background: #F4F7FA;
+    color: #0D1B2;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  /* Modern 3D Button */
+  .btn-primary {
+    background: #4C6FFF;
+    color: #FFFFFF;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(76, 111, 255, 0.3);
+    border: none;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-primary:hover:not(:disabled) {
+    background: #3D5CE6;
+    box-shadow: 0 4px 12px rgba(76, 111, 255, 0.4);
+    transform: translateY(-1px);
+  }
+  
+  .btn-primary:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(76, 111, 255, 0.3);
+  }
+  
+  .btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Modern Secondary Button */
+  .btn-secondary {
+    background: #0D1B2;
+    color: #FFFFFF;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(13, 27, 34, 0.3);
+    border: none;
+  }
+  
+  .btn-secondary:hover {
+    background: #0A1520;
+    box-shadow: 0 4px 12px rgba(13, 27, 34, 0.4);
+    transform: translateY(-1px);
+  }
+  
+  .btn-secondary:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(13, 27, 34, 0.3);
+  }
+  
+  /* Outline Button */
+  .btn-outline {
+    border: 2px solid #4C6FFF;
+    color: #4C6FFF;
+    background: transparent;
+    padding: 0.625rem 1.5rem;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.8125rem;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover {
+    background: #4C6FFF;
+    color: #FFFFFF;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(76, 111, 255, 0.3);
+  }
+  
+  /* Modern Glass Card */
+  .card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 1.75rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
+  
+  /* Dark Card */
+  .card-dark {
+    background: #0D1B2;
+    color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(13, 27, 34, 0.3);
+    padding: 1.75rem;
+  }
+  
+  /* Input Field */
+  .input-field {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    background: #FFFFFF;
+    outline: none;
+    transition: all 0.3s;
+    color: #0D1B2;
+  }
+  .input-field:focus {
+    border-color: #4C6FFF;
+    box-shadow: 0 0 0 3px rgba(76, 111, 255, 0.1);
+  }
+  
+  /* Sidebar Navigation Item */
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.25rem;
+    border-radius: 12px;
+    color: #FFFFFF;
+    transition: all 0.3s;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+  .nav-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(4px);
+  }
+  
+  .nav-item-active {
+    background: #4C6FFF;
+    color: #FFFFFF;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(76, 111, 255, 0.3);
+    transform: translateX(4px);
+  }
+  
+  /* Tab Button */
+  .tab-button {
+    padding: 0.625rem 1.5rem;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.8125rem;
+    transition: all 0.3s;
+  }
+  
+  .tab-button-active {
+    background: #4C6FFF;
+    color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(76, 111, 255, 0.3);
+  }
+  
+  .tab-button-inactive {
+    background: #FFFFFF;
+    color: #0D1B2;
+    border: 1px solid #E5E7EB;
+  }
+  .tab-button-inactive:hover {
+    background: #F9FAFB;
+    transform: translateY(-1px);
+  }
+}
